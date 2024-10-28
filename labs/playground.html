@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .playground, .controls {
+            border: 1px solid #000;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .playground {
+            width: 200px;
+        }
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="number"], input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="playground">
+            <h2>Playground</h2>
+            <!-- Placeholder content in Playground -->
+            <p>Response 1</p>
+            <p>Response 2</p>
+            <p>Response 3</p>
+        </div>
+        
+        <div class="controls">
+            <label for="topK">Top K</label>
+            <input type="number" id="topK" placeholder="Enter top K value">
+            
+            <label for="topP">Top P</label>
+            <input type="number" id="topP" placeholder="Enter top P value">
+            
+            <label for="temperature">Temperature</label>
+            <input type="number" id="temperature" placeholder="Enter temperature value">
+            
+            <label for="maxTokens">Max New Tokens</label>
+            <input type="number" id="maxTokens" placeholder="Enter max new tokens">
+            
+            <button class="submit-btn" onclick="handleSubmit()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function handleSubmit() {
+            // Get the values from the input fields
+            const topK = document.getElementById("topK").value;
+            const topP = document.getElementById("topP").value;
+            const temperature = document.getElementById("temperature").value;
+            const maxTokens = document.getElementById("maxTokens").value;
+
+            // For now, just log the values to the console
+            console.log("Top K:", topK);
+            console.log("Top P:", topP);
+            console.log("Temperature:", temperature);
+            console.log("Max New Tokens:", maxTokens);
+
+            // You can add further actions here, like making an API call or updating the UI
+        }
+    </script>
+</body>
+</html>
