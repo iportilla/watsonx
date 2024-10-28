@@ -1,1 +1,0 @@
-you are an expert UI designer, I will provide a sketch of a web page, write the html and javascript based on this picture
